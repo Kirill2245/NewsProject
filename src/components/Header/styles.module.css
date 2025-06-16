@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    align-items: center;
     width: 100%;
     padding: 12px 24px;
     background-color: white;
@@ -8,10 +9,16 @@
     gap:12px;
 }
 .title{
-    font-size: 28px;
-    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 0%;
+
 }
 .date{
+    font-weight: 400;
     font-size: 16px;
-    margin: 0;
+    line-height: 16px;
+    letter-spacing: 0%;
+
 }

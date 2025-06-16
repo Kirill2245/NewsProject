@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 const Header = () => {
     return(
         <header className={styles.header}>
-            <h1 className={styles.title}>News</h1>
+            <h1 className={styles.title}>Good morning</h1>
             <p className={styles.date}>{formatDate(new Date)}</p>
         </header>
     );

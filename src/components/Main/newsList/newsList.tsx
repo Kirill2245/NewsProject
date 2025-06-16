@@ -1,23 +1,26 @@
-import React from "react";
 import styles from './styles.module.css';
+import NewsItem from './NewsItem/NewsItem';
 
-interface NewsItem {
-    id: string,
-    title:string
+interface NewsItemProps {
+    id: string;
+    image: string;
+    title: string;
+    published: string;
+    author: string;
 }
 
-interface NewsListPromis{
-    news:Array<NewsItem>
+interface NewsListProps {
+    news: NewsItemProps[];
 }
 
-const NewsList:React.FC<NewsListPromis> = ({news}) =>{
-    return(
-        <ul className = {styles.list}>
-            {news.map(item => {
-                return<li key = {item.id}>{item.title}</li>
-            })}
+const NewsList: React.FC<NewsListProps> = ({ news }) => {
+    return (
+        <ul className={styles.list}>
+            {news.map(item => (
+                <NewsItem key={item.id} item={item} />
+            ))}
         </ul>
     );
 };
 
-export default NewsList 
+export default NewsList;
